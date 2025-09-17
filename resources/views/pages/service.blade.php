@@ -12,7 +12,7 @@
     <div class="container">
         <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
             <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our Services</small>
-            <h1 class="display-5 mb-5">What We Offer</h1>
+            <h1 class="display-5 mb-5">Layanan Yang Disediakan</h1>
         </div>
         <div class="row g-4">
             @foreach($services as $index => $service)

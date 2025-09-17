@@ -3,12 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Booking;
+use App\Models\Contact;
 
 class BookingController extends Controller
 {
+
+
     public function booking()
     {
-        return view('pages.book');
+        $contacts = Contact::all();
+        return view('pages.book' ,compact('contacts'));
     }
 
     public function store(Request $request)

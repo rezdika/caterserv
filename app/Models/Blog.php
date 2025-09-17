@@ -10,10 +10,7 @@ class Blog extends Model
     //
     use HasFactory;
 
-    protected $fillable = [
-        'title',
-        'content',
-        'author',
-        'image',
+    protected $guarded = [
+        'id',
     ];
 }

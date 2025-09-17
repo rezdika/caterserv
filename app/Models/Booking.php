@@ -18,17 +18,8 @@ class Booking extends Model
     /**
      * Field yang bisa diisi mass assignment
      */
-    protected $fillable = [
-        'country',
-        'city', 
-        'venue',
-        'event_type',
-        'number_of_guests',
-        'food_preference',
-        'contact_number',
-        'event_date',
-        'email',
-        'status'
+    protected $guarded = [
+        'id',
     ];
 
 }

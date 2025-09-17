@@ -27,12 +27,14 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="footer-item">
-                    <h4 class="mb-4">Contact Us</h4>
+                    <h4 class="mb-4">Informasi Contact</h4>
                     <div class="d-flex flex-column align-items-start">
-                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i> 123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt text-primary me-2"></i> (+012) 3456 7890 123</p>
-                        <p><i class="fas fa-envelope text-primary me-2"></i> info@example.com</p>
-                        <p><i class="fa fa-clock text-primary me-2"></i> 26/7 Hours Service</p>
+                        @foreach ( $contacts as $contact )
+                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $contact->address }}</p>
+                        <p><i class="fa fa-phone-alt text-primary me-2"></i> {{ $contact->phone }}</p>
+                        <p><i class="fas fa-envelope text-primary me-2"></i>{{ $contact->email }}</p>
+                        <p><i class="fa fa-clock text-primary me-2"></i>{{ $contact->service_hours }}</p>
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -17,6 +17,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\MassageController;
 use App\Http\Controllers\ContactController;
 
 
@@ -55,6 +56,11 @@ Route::get('/testimonial', [TestimonialController::class, 'testimonial'])->name(
 
 
 // Halaman kontak dengan form
-Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+Route::get('/contact', [MassageController::class, 'contact'])->name('contact');
 // Proses submit form kontak
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact', [MassageController::class, 'store'])->name('massage.store');
+
+// data contact
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+
+

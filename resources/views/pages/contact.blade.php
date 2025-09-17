@@ -13,12 +13,16 @@
         <div class="row g-5">
             <div class="col-lg-6">
                 <div class="contact-item">
-                    <h4 class="mb-4">Contact Information</h4>
+                    <h4 class="mb-4">Informasi Contact</h4>
                     <div class="d-flex flex-column align-items-start">
-                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i> 123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt text-primary me-2"></i> (+012) 3456 7890 123</p>
-                        <p><i class="fas fa-envelope text-primary me-2"></i> info@example.com</p>
-                        <p><i class="fa fa-clock text-primary me-2"></i> 26/7 Hours Service</p>
+                        @foreach ( $contacts as $contact )
+                        
+                        
+                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $contact->address }}</p>
+                        <p><i class="fa fa-phone-alt text-primary me-2"></i> {{ $contact->phone }}</p>
+                        <p><i class="fas fa-envelope text-primary me-2"></i>{{ $contact->email }}</p>
+                        <p><i class="fa fa-clock text-primary me-2"></i>{{ $contact->service_hours }}</p>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -48,7 +52,7 @@
                     </div>
                 @endif
                 
-                <form action="{{ route('contact.store') }}" method="POST">
+                <form action="{{ route('massage.store') }}" method="POST">
                     @csrf
                     <div class="row g-3">
                         <div class="col-md-6">

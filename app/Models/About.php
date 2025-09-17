@@ -17,13 +17,7 @@ class About extends Model
     /**
      * Field yang bisa diisi mass assignment
      */
-    protected $fillable = [
-        'title',
-        'description',
-        'image',
-        'experience_years',
-        'happy_clients',
-        'expert_chefs',
-        'events_complete'
+    protected $guarded = [
+        'id',
     ];
 }

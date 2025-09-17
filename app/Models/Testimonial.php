@@ -11,10 +11,7 @@ class Testimonial extends Model
 
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'profession',
-        'photo',
-        'message',
+   protected $guarded = [
+        'id',
     ];
 }

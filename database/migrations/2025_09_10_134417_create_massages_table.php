@@ -16,7 +16,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contacts', function (Blueprint $table) {
+        Schema::create('massages', function (Blueprint $table) {
             $table->id();
             $table->string('name'); // Nama pengirim
             $table->string('email'); // Email pengirim
